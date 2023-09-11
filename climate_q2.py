@@ -9,7 +9,6 @@ temp = df["Temperature"].tolist()
 co2 = df["CO2"].tolist()
 years = df["Year"].tolist()
 
-
 plt.subplot(2, 1, 1)
 plt.plot(years, co2, 'b--') 
 plt.title("Climate Data") 
