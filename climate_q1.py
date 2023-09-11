@@ -15,7 +15,7 @@ query = "SELECT Year, co2, Temperature FROM ClimateData"
 cursor.execute(query)
 
 
-# For each row at the cursor's fetchall, append to respective list
+# Append data from each row, indexing via column number
 for row in cursor.fetchall():
     years.append(row[0])
     co2.append(row[1])
@@ -30,7 +30,6 @@ print("Year data:", years)
 print("co2 data:", co2)
 print("Temp data:", temp)
         
-
 
 plt.subplot(2, 1, 1)
 plt.plot(years, co2, 'b--') 
